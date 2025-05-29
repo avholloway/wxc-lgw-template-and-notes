@@ -1,6 +1,7 @@
 Pre-Requisites
 --------------------------------------------------------------------------------
 ! ssh and internet connectivity are really the basics here
+
 ! ssh config if you need it:
 config t
  ip domain-name yourcompany.com
@@ -33,6 +34,12 @@ conf t
  end
 wr me
 reload
+
+! Now you can create your trunk in Control Hub.  It's location gives it regional
+! specific connection settings, but its usage is based on three things:
+! 1. Is it assigned, directly or indirectly via RG, to a location's PSTN conn?
+! 2. Is it assigned, directly/RG, to a location's unknown extension handling?
+! 3. Is it assigned, directly/RG, to a dial plan?
 
 Find/Replace Fields:
 --------------------------------------------------------------------------------
